@@ -5,4 +5,12 @@ export const addBlog = (blog) => {
       payload: blog,
     };
   };
+
+  // src/redux/actions/blogActions.js
+export const deleteBlog = (id) => {
+    return {
+      type: 'DELETE_BLOG',
+      payload: id,
+    };
+  };
   

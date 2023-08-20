@@ -24,6 +24,11 @@ switch (action.type) {
         ...state,
         blogList: [...state.blogList, action.payload],
     };
+    case 'DELETE_BLOG':
+      return {
+        ...state,
+        blogList: state.blogList.filter(blog => blog.id !== action.payload),
+      };
     default:
     return state;
 }
