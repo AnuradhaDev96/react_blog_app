@@ -30,4 +30,3 @@ switch (action.type) {
 };
 
 export default blogReducer;
-  
