@@ -3,7 +3,13 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Home from './components/Home';
 import About from './components/About';
 import Contact from './components/Contact';
+
+import CreateBlog from './components/CreateBlog';
+
 import 'bootstrap/dist/css/bootstrap.min.css';
+
+// Line numbers
+// 7, 46-47, 55
 
 const App = () => {
   return (
@@ -36,6 +42,11 @@ const App = () => {
                 <Link className="nav-link" to="/blog">Blog</Link>
               </li>
             </ul>
+
+            {/* Write now button in nav bar */}
+            <Link className="btn btn-primary" to="/createBlog">
+                <i className="bi bi-pencil-fill me-2"></i> Write Now
+            </Link>
           </div>
         </div>
       </nav>
@@ -43,6 +54,7 @@ const App = () => {
         <Route exact path="/" component={Home} />
         <Route path="/about" component={About} />
         <Route path="/contact" component={Contact} />
+        <Route path="/createBlog" component={CreateBlog} /> {/* New route for "createBlog" */}
         {/* Add more routes here */}
       </Switch>
     </Router>
