@@ -16,8 +16,7 @@ const BlogListItem = ({ blog }) => {
       <p>{blog.content}</p>
       <button
         className="btn btn-primary"
-        onClick={handleUpdateClick}
-      >
+        onClick={handleUpdateClick}>
         Update
       </button>
     </li>

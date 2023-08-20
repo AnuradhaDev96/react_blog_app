@@ -29,6 +29,17 @@ switch (action.type) {
         ...state,
         blogList: state.blogList.filter(blog => blog.id !== action.payload),
       };
+      case 'UPDATE_BLOG':
+        const updatedBlogList = state.blogList.map(blog => {
+          if (blog.id === action.payload.id) {
+            return action.payload;
+          }
+          return blog;
+        });
+        return {
+          ...state,
+          blogList: updatedBlogList,
+        };
     default:
     return state;
 }

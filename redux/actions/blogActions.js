@@ -13,4 +13,11 @@ export const deleteBlog = (id) => {
       payload: id,
     };
   };
+
+  export const updateBlog = (blog) => {
+    return {
+      type: 'UPDATE_BLOG',
+      payload: blog,
+    };
+  };
   
