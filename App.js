@@ -5,6 +5,7 @@ import About from './components/About';
 import Contact from './components/Contact';
 
 import BlogList from './components/BlogList';
+import UpdateBlog from './components/UpdateBlog';
 
 import CreateBlog from './components/CreateBlog';
 
@@ -59,6 +60,8 @@ const App = () => {
         <Route path="/createBlog" component={CreateBlog} />
 
         <Route path="/blogList" component={BlogList} />
+
+        <Route path="/updateBlog/:id" component={UpdateBlog} />
         {/* Add more routes here */}
       </Switch>
     </Router>
