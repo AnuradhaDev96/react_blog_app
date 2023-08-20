@@ -4,6 +4,8 @@ import Home from './components/Home';
 import About from './components/About';
 import Contact from './components/Contact';
 
+import BlogList from './components/BlogList';
+
 import CreateBlog from './components/CreateBlog';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -54,7 +56,9 @@ const App = () => {
         <Route exact path="/" component={Home} />
         <Route path="/about" component={About} />
         <Route path="/contact" component={Contact} />
-        <Route path="/createBlog" component={CreateBlog} /> {/* New route for "createBlog" */}
+        <Route path="/createBlog" component={CreateBlog} />
+
+        <Route path="/blogList" component={BlogList} />
         {/* Add more routes here */}
       </Switch>
     </Router>
