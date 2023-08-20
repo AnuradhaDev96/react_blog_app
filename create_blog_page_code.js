@@ -9,7 +9,11 @@ const CreateBlog = () => {
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
-    console.log('Submitted Blog:', blog);
+    const newBlog = {
+        ...blog,
+        date: new Date(),
+      };
+    console.log('Submitted Blog:', newBlog);
   };
 
   return (
